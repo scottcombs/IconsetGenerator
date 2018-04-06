@@ -18,6 +18,7 @@
     // Drawing code here.
 }
 
+// Capture the drag event and handle it ourselves
 - (BOOL)performDragOperation:(id <NSDraggingInfo>)sender {
 	NSPasteboard *pboard;
 	NSDragOperation sourceDragMask;

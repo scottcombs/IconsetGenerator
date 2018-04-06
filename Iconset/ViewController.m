@@ -15,7 +15,6 @@
 @synthesize image;
 @synthesize url;
 
-
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
@@ -124,9 +123,10 @@
 	NSString* pathToIconutil = [bundle pathForResource:@"iconutil" ofType:@""];
 	NSString* pathToIconset = [NSString stringWithFormat:@"%@%@.iconset", [components objectForKey:@"path"], [components objectForKey:@"filename"]];
 	
-	// Remove is icn set exists
+	// Path to icons
 	NSString* icns = [NSString stringWithFormat:@"%@%@.icns",[components objectForKey:@"path"], [components objectForKey:@"filename"]];
 	
+	// Remove if necessary
 	if ([fm fileExistsAtPath:icns]) {
 		[fm removeItemAtPath:icns error:NULL];
 	}
