@@ -660,13 +660,17 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="Iconset Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="Iconset Help" id="FKE-Sm-Kum">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
+                                                <action selector="showHelp:" target="Ady-hI-5gd" id="O7d-Tj-Zow"/>
                                             </connections>
                                         </menuItem>
                                     </items>
                                 </menu>
+                                <connections>
+                                    <action selector="showMyHelp:" target="Voe-Tx-rLC" id="pfq-ZY-EsX"/>
+                                </connections>
                             </menuItem>
                         </items>
                     </menu>
@@ -736,6 +740,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="generateICNSFileButton" destination="Ngu-E2-8Bq" id="o9R-1F-tQa"/>
                         <outlet property="image" destination="lai-Uc-cIJ" id="yew-ir-I6x"/>
                         <outlet property="imageView" destination="Ne1-h4-BhX" id="CMi-aa-fT4"/>
                     </connections>
