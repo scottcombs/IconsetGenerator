@@ -14,8 +14,12 @@
 @property (strong) IBOutlet NSImageView *imageView;
 @property (readwrite, retain)NSURL *url;
 @property (strong) IBOutlet NSImage *image;
+@property (strong) IBOutlet NSButton *generateICNSFileButton;
 
 - (IBAction)setPNGFromURL:(id)sender;
+- (IBAction)generateIconset:(id)sender;
+- (NSDictionary*)components:(NSURL*)url;
+- (IBAction)createICNS:(id)sender;
 
 @end
 
