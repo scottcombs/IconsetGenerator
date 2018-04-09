@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+@class Task;
 
 @interface ViewController : NSViewController
 
@@ -15,6 +16,7 @@
 @property (readwrite, retain)NSURL *url;
 @property (strong) IBOutlet NSImage *image;
 @property (strong) IBOutlet NSButton *generateICNSFileButton;
+@property (readwrite, retain)Task* task;
 
 - (IBAction)setPNGFromURL:(id)sender;
 - (IBAction)generateIconset:(id)sender;

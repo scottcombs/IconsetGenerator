@@ -1,0 +1,31 @@
+<dictionary xmlns:xi="http://www.w3.org/2003/XInclude">
+	
+	
+	<!-- use XInclude to include the standard suite -->
+	<xi:include href="file:///System/Library/ScriptingDefinitions/CocoaStandard.sdef" xpointer="xpointer(/dictionary/suite)"/>
+	
+	
+	<!-- specific suite(s) for the application follow... -->
+	<suite name="Iconset Generator Verbs" code="IVrb" description="Terminology for the IconsetGeneratorVerbs.">
+		
+		<enumeration name="preferredhands" code="LRnd">
+			<cocoa name="PreferredHands"/>
+			<enumerator name="Left Hand" code="LHrn" description="Prefers Left Hand">
+				<cocoa name="LeftHand"/>
+			</enumerator>
+			<enumerator name="Right Hand" code="RHrn" description="Prefers Right Hand">
+				<cocoa name="RightHand"/>
+			</enumerator>
+		</enumeration>
+		
+		<command name="do generate command" code="IVrbGnCm" description="create iconset and icns file from input">
+			<cocoa class="PerformGenerateScript"/>
+			<direct-parameter description="a file path passed to the command">
+				<type type="text"/>
+			</direct-parameter>
+			<result type="text" description="the path parameter enclosed in quotes"/>
+		</command>
+		
+	</suite>
+	
+</dictionary>

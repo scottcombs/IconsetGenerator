@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AppDelegate.h"
+#import "Task.h"
 
 @implementation ViewController
 @synthesize deleteFolder;
@@ -15,8 +16,18 @@
 @synthesize image;
 @synthesize url;
 @synthesize generateICNSFileButton;
+@synthesize task;
 
 static void *ImageContext = &ImageContext;
+
+- (BOOL)application:(NSApplication *)sender delegateHandlesKey:(NSString *)key {
+	
+	if ([key isEqualToString:@"tasks"]) {
+		return YES;
+	}
+		 
+	return NO;
+}
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
@@ -30,6 +41,8 @@ static void *ImageContext = &ImageContext;
 	// find us easier
 	AppDelegate* ad = (AppDelegate*)[NSApp delegate];
 	ad.vc = self;
+	
+	self.task.vc = self;
 	
 	// Add ourselves to observe the image property
 	[self addObserver:self forKeyPath:@"image" options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
@@ -166,7 +179,9 @@ static void *ImageContext = &ImageContext;
  */
 - (IBAction)setPNGFromURL:(id)sender {
 	NSURL* url = (NSURL*)sender;
-	self.url = [NSURL URLWithString:url.absoluteString];
+	NSString* path = [url.absoluteString stringByReplacingOccurrencesOfString:@"file://" withString:@""];
+	path = [NSString stringWithFormat:@"file://%@", path];
+	self.url = [NSURL URLWithString:path];
 	self.image = [[NSImage alloc]initByReferencingURL:self.url];
 	[self.imageView setNeedsLayout:YES];
 	[self generateIconset:self];

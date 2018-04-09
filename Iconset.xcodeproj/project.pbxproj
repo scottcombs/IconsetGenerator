@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		761020A620753FAC000E9B4C /* IconsetHelp in Resources */ = {isa = PBXBuildFile; fileRef = 761020A520753FAC000E9B4C /* IconsetHelp */; };
+		762F8B1E207AB9AA00D1942D /* PerformGenerateScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 762F8B1D207AB9AA00D1942D /* PerformGenerateScript.m */; };
 		766C294F2073D62D006253B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 766C294E2073D62D006253B0 /* AppDelegate.m */; };
 		766C29522073D62D006253B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766C29512073D62D006253B0 /* ViewController.m */; };
 		766C29542073D62D006253B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766C29532073D62D006253B0 /* Assets.xcassets */; };
 		766C29572073D62D006253B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766C29552073D62D006253B0 /* Main.storyboard */; };
 		766C295A2073D62D006253B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 766C29592073D62D006253B0 /* main.m */; };
+		76C886B5207A8647000296DB /* IconsetGenerator.sdef in Resources */ = {isa = PBXBuildFile; fileRef = 76C886B4207A8647000296DB /* IconsetGenerator.sdef */; };
 		76DF908C207415F100BF73ED /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DF908B207415F100BF73ED /* AppKit.framework */; };
 		76DF908F2074176C00BF73ED /* NSImageView+NSImageViewExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DF908E2074176C00BF73ED /* NSImageView+NSImageViewExtensions.m */; };
 		76F8BA2D207510AF00A84C11 /* iconutil in Resources */ = {isa = PBXBuildFile; fileRef = 76F8BA2B207510AF00A84C11 /* iconutil */; };
@@ -22,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		761020A520753FAC000E9B4C /* IconsetHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = IconsetHelp; sourceTree = "<group>"; };
+		762F8B1C207AB9AA00D1942D /* PerformGenerateScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformGenerateScript.h; sourceTree = "<group>"; };
+		762F8B1D207AB9AA00D1942D /* PerformGenerateScript.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformGenerateScript.m; sourceTree = "<group>"; };
+		762F8B1F207ABB1400D1942D /* scriptLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = scriptLog.h; sourceTree = "<group>"; };
 		766C294A2073D62D006253B0 /* Iconset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iconset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		766C294D2073D62D006253B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		766C294E2073D62D006253B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,6 +37,7 @@
 		766C29582073D62D006253B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		766C29592073D62D006253B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		766C295B2073D62D006253B0 /* Iconset.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Iconset.entitlements; sourceTree = "<group>"; };
+		76C886B4207A8647000296DB /* IconsetGenerator.sdef */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = IconsetGenerator.sdef; sourceTree = "<group>"; };
 		76DF908B207415F100BF73ED /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		76DF908D2074176C00BF73ED /* NSImageView+NSImageViewExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSImageView+NSImageViewExtensions.h"; sourceTree = "<group>"; };
 		76DF908E2074176C00BF73ED /* NSImageView+NSImageViewExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSImageView+NSImageViewExtensions.m"; sourceTree = "<group>"; };
@@ -52,6 +58,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		762F8B20207B08A500D1942D /* Scriptable */ = {
+			isa = PBXGroup;
+			children = (
+				762F8B1C207AB9AA00D1942D /* PerformGenerateScript.h */,
+				762F8B1D207AB9AA00D1942D /* PerformGenerateScript.m */,
+				76C886B4207A8647000296DB /* IconsetGenerator.sdef */,
+			);
+			path = Scriptable;
+			sourceTree = "<group>";
+		};
 		766C29412073D62D006253B0 = {
 			isa = PBXGroup;
 			children = (
@@ -77,13 +93,15 @@
 				766C294E2073D62D006253B0 /* AppDelegate.m */,
 				766C29502073D62D006253B0 /* ViewController.h */,
 				766C29512073D62D006253B0 /* ViewController.m */,
+				76DF908D2074176C00BF73ED /* NSImageView+NSImageViewExtensions.h */,
+				76DF908E2074176C00BF73ED /* NSImageView+NSImageViewExtensions.m */,
+				762F8B20207B08A500D1942D /* Scriptable */,
 				766C29532073D62D006253B0 /* Assets.xcassets */,
 				766C29552073D62D006253B0 /* Main.storyboard */,
 				766C29582073D62D006253B0 /* Info.plist */,
+				762F8B1F207ABB1400D1942D /* scriptLog.h */,
 				766C29592073D62D006253B0 /* main.m */,
 				766C295B2073D62D006253B0 /* Iconset.entitlements */,
-				76DF908D2074176C00BF73ED /* NSImageView+NSImageViewExtensions.h */,
-				76DF908E2074176C00BF73ED /* NSImageView+NSImageViewExtensions.m */,
 			);
 			path = Iconset;
 			sourceTree = "<group>";
@@ -176,6 +194,7 @@
 				76F8BA2E207510AF00A84C11 /* sips in Resources */,
 				76F8BA2D207510AF00A84C11 /* iconutil in Resources */,
 				76F8BA322075128F00A84C11 /* Default.png in Resources */,
+				76C886B5207A8647000296DB /* IconsetGenerator.sdef in Resources */,
 				761020A620753FAC000E9B4C /* IconsetHelp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +226,7 @@
 				766C295A2073D62D006253B0 /* main.m in Sources */,
 				766C294F2073D62D006253B0 /* AppDelegate.m in Sources */,
 				76DF908F2074176C00BF73ED /* NSImageView+NSImageViewExtensions.m in Sources */,
+				762F8B1E207AB9AA00D1942D /* PerformGenerateScript.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
