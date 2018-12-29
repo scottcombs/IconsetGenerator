@@ -151,6 +151,16 @@ static void *ImageContext = &ImageContext;
 			[task launch];
 			[task waitUntilExit];
 		}
+
+		// Create Content.json file
+		NSBundle *myBundle = [NSBundle mainBundle];
+		NSString *absPath= [myBundle pathForResource:@"Contents" ofType:@"json"];
+		NSString *pathToContentsJson = [[NSString alloc]initWithFormat:@"%@/Contents.json", pathToIconset];
+		NSData* data = [[NSData alloc] initWithContentsOfFile:absPath];
+		if (data != nil) {
+			[data writeToFile:pathToContentsJson atomically:YES];
+		}
+		
 	}
 	// End of creating icons
 }

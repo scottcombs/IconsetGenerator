@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		761020A620753FAC000E9B4C /* IconsetHelp in Resources */ = {isa = PBXBuildFile; fileRef = 761020A520753FAC000E9B4C /* IconsetHelp */; };
+		762ABC8621D7D0BE00E9A160 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 762ABC8521D7D0BE00E9A160 /* Contents.json */; };
 		762F8B1E207AB9AA00D1942D /* PerformGenerateScript.m in Sources */ = {isa = PBXBuildFile; fileRef = 762F8B1D207AB9AA00D1942D /* PerformGenerateScript.m */; };
 		766C294F2073D62D006253B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 766C294E2073D62D006253B0 /* AppDelegate.m */; };
 		766C29522073D62D006253B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766C29512073D62D006253B0 /* ViewController.m */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		761020A520753FAC000E9B4C /* IconsetHelp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = IconsetHelp; sourceTree = "<group>"; };
+		762ABC8521D7D0BE00E9A160 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		762F8B1C207AB9AA00D1942D /* PerformGenerateScript.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerformGenerateScript.h; sourceTree = "<group>"; };
 		762F8B1D207AB9AA00D1942D /* PerformGenerateScript.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerformGenerateScript.m; sourceTree = "<group>"; };
 		762F8B1F207ABB1400D1942D /* scriptLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = scriptLog.h; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				766C29512073D62D006253B0 /* ViewController.m */,
 				76DF908D2074176C00BF73ED /* NSImageView+NSImageViewExtensions.h */,
 				76DF908E2074176C00BF73ED /* NSImageView+NSImageViewExtensions.m */,
+				762ABC8521D7D0BE00E9A160 /* Contents.json */,
 				762F8B20207B08A500D1942D /* Scriptable */,
 				766C29532073D62D006253B0 /* Assets.xcassets */,
 				766C29552073D62D006253B0 /* Main.storyboard */,
@@ -192,6 +195,7 @@
 				766C29542073D62D006253B0 /* Assets.xcassets in Resources */,
 				766C29572073D62D006253B0 /* Main.storyboard in Resources */,
 				76F8BA2E207510AF00A84C11 /* sips in Resources */,
+				762ABC8621D7D0BE00E9A160 /* Contents.json in Resources */,
 				76F8BA2D207510AF00A84C11 /* iconutil in Resources */,
 				76F8BA322075128F00A84C11 /* Default.png in Resources */,
 				76C886B5207A8647000296DB /* IconsetGenerator.sdef in Resources */,
